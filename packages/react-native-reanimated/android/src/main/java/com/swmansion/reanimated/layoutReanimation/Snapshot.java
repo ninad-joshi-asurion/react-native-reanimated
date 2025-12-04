@@ -123,8 +123,8 @@ public class Snapshot {
     int[] location = new int[2];
     View currentView = view;
     while (currentView != null) {
-      location[0] += currentView.getX();
-      location[1] += currentView.getY();
+      location[0] += Math.round(currentView.getX());
+      location[1] += Math.round(currentView.getY());
       if (ScreensHelper.isScreen(currentView)
           && ScreensHelper.isScreensCoordinatorLayout(currentView.getParent())) {
         View screen = currentView;
